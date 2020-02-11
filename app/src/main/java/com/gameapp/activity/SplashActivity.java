@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.gameapp.R;
+import com.gameapp.utils.AppPrefrences;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -29,8 +30,13 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-                finish();
+                if (AppPrefrences.isUserLoggedOut(SplashActivity.this)) {
+                    startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                    finish();
+                } else {
+                    startActivity(new Intent(SplashActivity.this, HomeActivity.class));
+                    finish();
+                }
             }
         }, (duration + 500));
     }

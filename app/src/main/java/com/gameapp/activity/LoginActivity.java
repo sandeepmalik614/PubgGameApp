@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.gameapp.R;
+import com.gameapp.utils.AppPrefrences;
 
 import static com.gameapp.utils.AppUtils.isConnectionAvailable;
 
@@ -30,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void goToForgot(View view) {
+        startActivity(new Intent(this, ForgotPasswordActivity.class));
     }
 
     public void validateLogin(View view) {
@@ -37,10 +39,12 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "Please enter username", Toast.LENGTH_SHORT).show();
         } else if (edtPassword.getText().toString().isEmpty()) {
             Toast.makeText(this, "Please enter password", Toast.LENGTH_SHORT).show();
-        }else{
-            if(isConnectionAvailable(this)){
-                Toast.makeText(this, "All Done", Toast.LENGTH_SHORT).show();
-            }else{
+        } else {
+            if (isConnectionAvailable(this)) {
+                AppPrefrences.setUserLoggedOut(this, false);
+                startActivity(new Intent(this, HomeActivity.class));
+                finish();
+            } else {
                 Toast.makeText(this, "Please check your internet connection", Toast.LENGTH_SHORT).show();
             }
         }

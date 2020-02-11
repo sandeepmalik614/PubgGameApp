@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="240dp"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="8dp"
+    android:elevation="6dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/screen_bg"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:singleLine="true"
+            android:text="TODAY AT 04:00 PM"
+            android:textColor="@color/white"
+            android:textSize="@dimen/standeredTextSize"
+            app:fontFamily="@font/abel" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:singleLine="true"
+            android:text="Squad Fury"
+            android:textColor="@color/white"
+            android:textSize="@dimen/buttonTextSize"
+            android:textStyle="bold"
+            app:fontFamily="@font/abel" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:singleLine="true"
+            android:text="Globel-4v4-80-32 slots"
+            android:textColor="@color/white"
+            android:textSize="@dimen/standeredTextSize"
+            app:fontFamily="@font/abel" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
