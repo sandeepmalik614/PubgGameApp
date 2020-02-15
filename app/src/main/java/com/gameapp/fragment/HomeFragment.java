@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -28,8 +29,8 @@ public class HomeFragment extends Fragment {
         rvUpcomingTour = root.findViewById(R.id.rvUpcomingTour);
         rv_top = root.findViewById(R.id.rv_main_top);
         rv_top.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
-        rvPastTour.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
-        rvUpcomingTour.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
+        rvPastTour.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        rvUpcomingTour.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("https://wallpapercave.com/wp/wp2516033.jpg");
         arrayList.add("https://www.geeknoob.com/wp-content/uploads/PUBG-wallpapers-HD-images-4K.jpg");

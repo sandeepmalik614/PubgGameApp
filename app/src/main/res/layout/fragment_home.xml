@@ -16,71 +16,73 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clipToPadding="false"
-            android:paddingLeft="16dp"/>
+            android:paddingLeft="16dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="16dp"
             android:layout_below="@id/rv_main_top"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
             android:text="Upcoming tournaments"
-            android:textSize="@dimen/buttonTextSize"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:textSize="@dimen/buttonTextSize" />
 
         <TextView
             android:id="@+id/tvUpComingSeeAll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/rv_main_top"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_marginTop="24dp"
             android:layout_marginRight="16dp"
-            android:layout_below="@id/rv_main_top"
             android:text="See All"
-            android:layout_alignParentEnd="true"
-            android:textSize="@dimen/buttonTextSize"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
             android:textColor="@color/colorPrimary"
-            android:layout_alignParentRight="true" />
+            android:textSize="@dimen/standeredTextSize"
+            android:background="@drawable/see_all_back"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvUpcomingTour"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvUpComingSeeAll"
-            android:layout_marginTop="8dp"
-            android:paddingLeft="16dp"
-            android:clipToPadding="false"/>
+            android:layout_marginTop="8dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="16dp"
             android:layout_below="@id/rvUpcomingTour"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
             android:text="Past tournaments"
-            android:textSize="@dimen/buttonTextSize"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:textSize="@dimen/buttonTextSize" />
 
         <TextView
             android:id="@+id/tvPastSeeAll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/rvUpcomingTour"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_marginTop="24dp"
             android:layout_marginRight="16dp"
-            android:layout_below="@id/rvUpcomingTour"
             android:text="See All"
-            android:layout_alignParentEnd="true"
-            android:textSize="@dimen/buttonTextSize"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
             android:textColor="@color/colorPrimary"
-            android:layout_alignParentRight="true" />
+            android:textSize="@dimen/standeredTextSize"
+            android:background="@drawable/see_all_back"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvPastTour"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvPastSeeAll"
-            android:layout_marginTop="8dp"
-            android:paddingLeft="16dp"
-            android:clipToPadding="false"/>
+            android:layout_marginTop="8dp" />
 
     </RelativeLayout>
 

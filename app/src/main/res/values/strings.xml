@@ -15,4 +15,8 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+
+    <string name="tourtimeline"><u>Tour Timeline</u></string>
+    <string name="format"><u>Format</u></string>
+
 </resources>
